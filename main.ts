@@ -1,3 +1,5 @@
+import { getWeather } from "./src/getWeather.js";
+
 // DOM variables (main button, text area for jokes)
 const nextJoke = document.querySelector("#button") as HTMLButtonElement;
 const jokeText = document.querySelector("#joke") as HTMLElement;
@@ -61,3 +63,5 @@ nextJoke.addEventListener("click", () => {
   getJoke();
   jokeScore(currentScore);
 });
+
+getWeather();

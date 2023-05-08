@@ -7,6 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+import { getWeather } from "./src/getWeather.js";
 // DOM variables (main button, text area for jokes)
 const nextJoke = document.querySelector("#button");
 const jokeText = document.querySelector("#joke");
@@ -66,3 +67,4 @@ nextJoke.addEventListener("click", () => {
     getJoke();
     jokeScore(currentScore);
 });
+getWeather();

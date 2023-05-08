@@ -114,3 +114,14 @@ section .layout button:hover {
 .rating:not(:checked) > label:hover ~ label {
   color: #fbc531;
 }
+
+/* Styling weather reference */
+.weather {
+  font-family: "Rubik", sans-serif;
+  color: #c7ecee;
+}
+
+section .layout img {
+  vertical-align: bottom;
+  margin-right: 6px;
+}
