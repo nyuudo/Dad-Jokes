@@ -1,4 +1,5 @@
 import { getWeather } from "./src/getWeather.js";
+import { randomShapes } from "./src/randomShapes.js";
 
 // DOM variables (main button, text area for jokes)
 const nextJoke = document.querySelector("#button") as HTMLButtonElement;
@@ -89,6 +90,7 @@ const randomJoke = () => {
 nextJoke.addEventListener("click", () => {
   randomJoke();
   jokeScore(currentScore);
+  randomShapes();
 });
 
 getWeather();

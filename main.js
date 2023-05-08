@@ -8,6 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { getWeather } from "./src/getWeather.js";
+import { randomShapes } from "./src/randomShapes.js";
 // DOM variables (main button, text area for jokes)
 const nextJoke = document.querySelector("#button");
 const jokeText = document.querySelector("#joke");
@@ -92,5 +93,6 @@ const randomJoke = () => {
 nextJoke.addEventListener("click", () => {
     randomJoke();
     jokeScore(currentScore);
+    randomShapes();
 });
 getWeather();
