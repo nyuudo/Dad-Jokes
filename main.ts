@@ -58,9 +58,36 @@ const jokeScore = (score: number) => {
   }
 };
 
+// Exercise 5 random joke between 2 APIs
+// ASYNC function from ANOTHER source of Jokes API
+const getManateeJoke = async () => {
+  try {
+    const manateeUrl = `https://manateejokesapi.herokuapp.com/manatees/random`;
+    const response = await fetch(manateeUrl);
+    const data = await response.json();
+    currentJoke = `${data.setup}</br>${data.punchline}`;
+    jokeText.innerHTML = `${currentJoke}`;
+    rating.classList.add("fadeIn");
+    nextJoke.textContent = "NEXT JOKE";
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+// Function to get randomJokes from different APIs
+const randomJoke = () => {
+  const choice: number = Math.floor(Math.random() * 2);
+  if (choice === 0) {
+    getJoke();
+  }
+  if (choice === 1) {
+    getManateeJoke();
+  }
+};
+
 // Listeners for the main button
 nextJoke.addEventListener("click", () => {
-  getJoke();
+  randomJoke();
   jokeScore(currentScore);
 });
 
