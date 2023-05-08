@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
 
 body {
   font-family: "Luckiest Guy", cursive;
@@ -74,4 +75,42 @@ section .layout button {
 section .layout button:hover {
   background-color: #c23616;
   color: #ffffff;
+}
+
+/* Styling Rating Stars */
+.rating {
+  border: none;
+  margin: auto;
+  max-width: 100px;
+  transition: opacity 2s;
+  opacity: 0;
+}
+
+.rating.fadeIn {
+  opacity: 1;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label:before {
+  content: "\f005";
+  font-family: FontAwesome;
+  margin: 4px;
+  font-size: 1.5rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.rating > label {
+  color: #192a56;
+  float: right;
+  cursor: pointer;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #fbc531;
 }
