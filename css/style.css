@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+body {
+  font-family: "Luckiest Guy", cursive;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+section .layout {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  max-width: 480px;
+  padding: 32px;
+  box-shadow: 0 8px 16px rgba(25, 42, 86, 0.75);
+  background: rgba(25, 42, 86, 0.2);
+  background: linear-gradient(
+    0deg,
+    rgba(39, 60, 117, 1) 35%,
+    rgba(25, 42, 86, 1) 100%
+  );
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(25, 42, 86, 0.5);
+  border-radius: 8px;
+  transform: rotateZ(-1deg);
+}
+
+section .layout::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+section .layout h1 {
+  font-size: 4rem;
+  text-shadow: 4px 4px 8px #130f40;
+  position: relative;
+  text-align: center;
+  color: #fbc531;
+}
+
+section .layout h2 {
+  text-shadow: 4px 4px 8px #130f40;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+}
+
+section .layout p {
+  position: relative;
+  color: #ffffff;
+}
+/* Styling Buttons */
+section .layout button {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+  color: #192a56;
+  background-color: #fbc531;
+  transition-duration: 0.4s;
+}
+
+section .layout button:hover {
+  background-color: #c23616;
+  color: #ffffff;
+}
