@@ -4,6 +4,7 @@
 
 body {
   font-family: "Luckiest Guy", cursive;
+  margin: 0;
 }
 
 section {
@@ -124,4 +125,19 @@ section .layout button:hover {
 section .layout img {
   vertical-align: bottom;
   margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+  section .layout {
+    max-width: 320px;
+    padding: 16px;
+  }
+
+  section .layout h1 {
+    font-size: 3rem;
+  }
+
+  section .layout h2 {
+    font-size: 1.25rem;
+  }
 }
